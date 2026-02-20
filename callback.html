@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Auth Callback</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .message {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Redirecting...</h1>
+        <p>If you're not redirected automatically, <a href="/">click here</a>.</p>
+    </div>
+    <script>
+        // Extract token from URL hash and redirect to main page
+        const hash = window.location.hash;
+        if (hash) {
+            window.location.href = '/' + hash;
+        } else {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
